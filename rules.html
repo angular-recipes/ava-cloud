@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="rulesstyle.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans">
+    </head>
+
+
+    <body>
+        <table>
+            <tr>
+                <th><button class="button" id="myBtn"><span class="square">+</span></button>Rule No</th>
+                <th>Module</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Count Limit</th>
+                <th>CAM IDS</th>
+                <th>Enabled</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Person</td>
+                <td>9 PM</td>
+                <td>6 AM</td>
+                <td>0</td>
+                <td>CAM 001</td>
+                <td><span class="dot">&#10003</span></td>
+            </tr>
+
+            
+            <tr>
+                <td>2</td>
+                <td>Person</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>5</td>
+                <td>CAM 004</td>
+                <td><span class="dot">&#10003</span></td>
+            </tr>
+
+            
+            <tr>
+                <td>3</td>
+                <td>Fire</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>5</td>
+                <td>CAM 002</td>
+                <td>close</td>
+            </tr>
+        </table>
+
+        <!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      
+        <span class="close">&times;</span>
+
+      <span style="color:red;font-size:20px;font-weight:bold;"> Add a new Rule</span>
+      
+      <form>    
+      
+      <div class="form">
+      
+          <div class="leftside">
+              <br><br><label for="model"> <b>Select Model</b></label><br>
+              <select name="model" id="model" >
+                  <option value="fire">Fire</option>
+                  <option value="box">Box</option>
+                  <option value="car">Car</option>
+                  <option value="person">Person</option>
+                </select>
+                <br><br>
+                <br><br>
+                <br><br>
+                <label for="cam"><b>CAM ID</b></label><br>
+                <input type="text" id="cam" ><br>
+      
+                <label for="count"><b>Count Limit</b></label><br>
+                <input type="text" id="count" ><br>
+          </div>
+          <div class="rightside">
+      
+              <label for="start"><b>Start Time</b></label><br>
+              <input type="text" id="start" ><br>
+      
+              <label for="end"><b>End Time</b></label><br>
+              <input type="text" id="end" ><br>
+      
+              <br><br><br><b>Enable</b> <input type="checkbox" name="" checked="checked"><br><br>
+              <br><br><br> <input type="submit" value="Save Rule">
+      
+      
+          </div>
+      
+      </div>
+      
+      
+      
+      </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  
+  </div>
+
+
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+    
+
+    </body>

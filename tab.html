@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="tabstyle.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans">
+</head>
+
+<body>
+
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'mysub')" id="defaultOpen">My Subscription</button>
+  <button class="tablinks" onclick="openCity(event, 'market')">Marketplace</button>
+  <button class="tablinks" onclick="openCity(event, 'rules')">Rules</button>
+</div>
+
+<!-- Code for My Subscription-->
+
+<div id="mysub" class="tabcontent">
+  <div  class="flexbox">
+      <div class="box1">
+        <img src ="person.jpg">
+      </div>
+      <div class="box2">
+        <h3 style="color:red;font-weight:normal">Person Detection</h3>
+        <p>Pedestrician Detection is an essential and significiant task in any intelligence video surveillance system,as it provides the fundamental information for semantic undertanding of the video footages. It has an obvious extension to automative applications due to the potential for improving safety systems.</p>
+        <div>
+         <b> Subscription Date: </b>15-09-2020 &nbsp &nbsp &nbsp &nbsp  <b>Usage: 34656</b> frames,<b> 17 </b>alerts
+        </div>
+        
+      </div>
+      <div class="box3">
+       <!-- Trigger/Open The Modal -->
+        <img src="remove.jpg" id="myBtn">
+      </div>
+  </div>
+
+
+    <div  class="flexbox">
+      <div class="box1">
+        <img src ="bag.jpg">
+      </div>
+      <div class="box2">
+        <h3 style="color:red;font-weight:normal">Unattented Bag Detection</h3>
+        <p>Pedestrician Detection is an essential and significiant task in any intelligence video surveillance system,as it providesthe fundamental information for semantic undertanding of the video footages. It has an obvious extension to automative applications due to the potential for improving safety systems.     </p>
+        <div>
+          <b> Subscription Date: </b>15-09-2020 &nbsp &nbsp &nbsp &nbsp  <b>Usage: 34656</b> frames,<b> 17 </b>alerts
+         </div>
+      </div>
+      <div class="box3">
+        <img src="remove.jpg">
+      </div>
+  </div>
+
+
+
+
+</div>
+
+<!-- Code for Market-->
+
+<div id="market" class="tabcontent">
+
+  <div class="search">
+    Prices are monthly per Camera<br>
+  </div>
+  
+
+  <div  class="flexbox">
+    <div class="box1">
+      <img src ="face.jpg">
+    </div>
+    <div class="box2">
+      <h3 style="color:red;font-weight:normal">Face Detection</h3>
+      <p>The technology assures system performance and reliability with live face detection,simultaneous multiple face recognition and fast face matching in 1-to-1 and 1-to-many modes. Atneva Labs Face Recognition is ideally suited for human resource control applications as well as for security and enformcement aplications. </p>
+  
+    </div>
+    <div class="box3">
+      <img src="subscribe.jpg">
+    </div>
+  </div>
+
+ <div  class="flexbox">
+   <div class="box1">
+    <img src ="gun.jpg">
+   </div>
+   <div class="box2">
+    <h3 style="color:red;font-weight:normal">Gun Detection</h3>
+    <p>Leverage Atneva's best of the bredd pre-trained model to idenify firearms and alert law enforcement within seconds. The model can recognise thousands of different types of guns from small pistols to assault rifles and military grade weapons.</p>
+
+   </div>
+   <div class="box3">
+    <img src="subscribe.jpg">
+   </div>
+  </div>
+
+
+
+</div>
+
+<!-- Code for Rules-->
+
+<div id="rules" class="tabcontent">
+<!-- Rules Section and Modal  -->
+    Refer to rules.html
+</div>
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+
+    <span class="close">&times;</span>
+    <div class="confirm"> 
+        
+          Confirm removal of subscription for Person Detection
+        
+    </div>
+    <div >
+      <button id="quity" class="yes size"> Yes</button>
+      <button id="quitn" class="no size"> No </button>
+    </div>
+
+
+
+
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+function openCity(evt,mySub) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(mySub).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+document.getElementById("quity").onclick = function() {
+  modal.style.display = "none";
+}
+document.getElementById("quitn").onclick = function() {
+  modal.style.display = "none";
+}
+
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+
+
+
+
+
+</script>
+   
+</body>
+</html> 
