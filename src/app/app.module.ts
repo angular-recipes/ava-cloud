@@ -8,6 +8,9 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { AlertsPageComponent } from './components/alerts-page/alerts-page.component';
 import { SettingsPageComponent } from './components/settings-page/settings-page.component';
 import { SubscriptionPageComponent } from './components/subscription-page/subscription-page.component';
+import { MySubscriptionsComponent } from './components/my-subscriptions/my-subscriptions.component';
+import { MarketplaceComponent } from './components/marketplace/marketplace.component';
+import { RulesComponent } from './components/rules/rules.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { SubscriptionPageComponent } from './components/subscription-page/subscr
     HomePageComponent,
     AlertsPageComponent,
     SettingsPageComponent,
-    SubscriptionPageComponent
+    SubscriptionPageComponent,
+    MySubscriptionsComponent,
+    MarketplaceComponent,
+    RulesComponent
   ],
   imports: [
     BrowserModule,
