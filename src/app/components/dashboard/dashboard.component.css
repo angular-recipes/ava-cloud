@@ -1,0 +1,43 @@
+.arko {
+  font-size: 15px;
+}
+
+.subscribe {
+  margin-top: 20px;
+  padding: 20px;
+  width: 900px;
+  display: flex;
+  background-color: #fdebeb;
+}
+
+.algorithm {
+  padding: 15px 5px 10px 20px;
+}
+
+.image {
+  padding-top: 12px;
+}
+.download {
+  display: flex;
+  background-color: #ebfdfc;
+  margin-top: 5px;
+  width: 900px;
+  padding: 25px;
+}
+
+.ava {
+  margin-left: 12px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.penguin {
+  margin-left: 120px;
+  margin-top: 5px;
+}
+
+.linux {
+  margin-top: 10px;
+  font-weight: bold;
+  margin-left: 12px;
+}

@@ -1,8 +1,29 @@
-<h1>HomePage</h1>
-
+<div>
+       
+    <p class="logocontainer">
+      <img src="/images/logo.jpg" width=64px height=64px routerLink="/home/dashboard">
+    </p>
+    <div class="menuitems">
+     <ul class="menu"> 
+        <li class="navbar">
+            <img src="/images/alert.jpg" width=38px height=38px> <a class="color" routerLink="/home/alerts"> ALERTS ( <span style="color:red;">1 </span>)</a> 
+        </li>
+        <li class="navbar">
+            <img src="/images/settings.jpg" width=38px height=38px> <a class="color" routerLink="/home/settings">SETTINGS</a>
+        </li>
+        <li class="navbar">
+            <img src="/images/subscription.jpg" width=38px height=38px>  <a class="color" routerLink="/home/subscriptions">SUBSCRIPTIONS</a>
+        </li>
+        <li class="navbar1">
+            <img src="/images/logout.jpg" width=38px height=38px > <a class="color" routerLink="/login" >LOGOUT</a>
+        </li>
+      </ul>
+    </div>
+</div>
+<!-- 
 <a routerLink="/home/alerts">Alerts</a> |
 <a routerLink="/home/settings">Settings</a> |
 <a routerLink="/home/subscriptions">Subscriptions</a> |
-<a routerLink="/login">logout</a> 
+<a routerLink="/login">logout</a>  -->
 <router-outlet></router-outlet>
 

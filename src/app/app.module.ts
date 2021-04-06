@@ -11,6 +11,9 @@ import { SubscriptionPageComponent } from './components/subscription-page/subscr
 import { MySubscriptionsComponent } from './components/my-subscriptions/my-subscriptions.component';
 import { MarketplaceComponent } from './components/marketplace/marketplace.component';
 import { RulesComponent } from './components/rules/rules.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PasswordComponent } from './components/password/password.component';
+import { AccountInfoComponent } from './components/account-info/account-info.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { RulesComponent } from './components/rules/rules.component';
     SubscriptionPageComponent,
     MySubscriptionsComponent,
     MarketplaceComponent,
-    RulesComponent
+    RulesComponent,
+    DashboardComponent,
+    PasswordComponent,
+    AccountInfoComponent
   ],
   imports: [
     BrowserModule,

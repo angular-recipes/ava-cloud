@@ -1,9 +1,9 @@
-<p>subscription-page works!</p>
-
-<a routerLink="/home/subscriptions/my-subscriptions">My subscriptions</a> |
-<a routerLink="/home/subscriptions/marketplace">Marketplace</a> |
-<a routerLink="/home/subscriptions/rules">Rules</a> |
-
-
-<router-outlet></router-outlet>
+<div class="tab">
+    <button class="tablinks" routerLink="/home/subscriptions/my-subscriptions" routerLinkActive="active">My subscriptions</button>
+    <button class="tablinks" routerLink="/home/subscriptions/marketplace" routerLinkActive="active">Marketplace</button>
+    <button class="tablinks" routerLink="/home/subscriptions/rules" routerLinkActive="active">Rules</button>
+</div>
+<div class="tabcontent">
+    <router-outlet></router-outlet>
+</div>
 

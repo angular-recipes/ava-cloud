@@ -1,1 +1,8 @@
-<p>settings-page works!</p>
+<div class="tab">
+    <button class="tablinks" routerLink="/home/settings/password" routerLinkActive="active">Password</button>
+    <button class="tablinks" routerLink="/home/settings/account" routerLinkActive="active">Account Info</button>
+</div>
+
+<div class="tabcontent">
+    <router-outlet></router-outlet>
+</div>

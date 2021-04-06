@@ -1,3 +1,6 @@
+import { AccountInfoComponent } from './components/account-info/account-info.component'
+import { PasswordComponent } from './components/password/password.component'
+import { DashboardComponent } from './components/dashboard/dashboard.component'
 import { RulesComponent } from './components/rules/rules.component'
 import { MarketplaceComponent } from './components/marketplace/marketplace.component'
 import { MySubscriptionsComponent } from './components/my-subscriptions/my-subscriptions.component'
@@ -15,17 +18,28 @@ const routes: Routes = [
     path: 'home',
     component: HomePageComponent,
     children: [
+      { path: 'dashboard', component: DashboardComponent },
       { path: 'alerts', component: AlertsPageComponent },
-      { path: 'settings', component: SettingsPageComponent },
+      {
+        path: 'settings',
+        component: SettingsPageComponent,
+        children: [
+          { path: 'password', component: PasswordComponent },
+          { path: 'account', component: AccountInfoComponent },
+          { path: '', redirectTo: '/home/settings/password', pathMatch: 'full' }
+        ]
+      },
       {
         path: 'subscriptions',
         component: SubscriptionPageComponent,
         children: [
           { path: 'my-subscriptions', component: MySubscriptionsComponent },
           { path: 'marketplace', component: MarketplaceComponent },
-          { path: 'rules', component: RulesComponent }
+          { path: 'rules', component: RulesComponent },
+          { path: '', redirectTo: '/home/subscriptions/my-subscriptions', pathMatch: 'full' }
         ]
-      }
+      },
+      { path: '', redirectTo: '/home/dashboard', pathMatch: 'full' }
     ]
   },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
