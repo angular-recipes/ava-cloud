@@ -2,11 +2,11 @@
     <img class="logo">
     
    <p class="login"> AVA CLOUD LOGIN </p>
-    <form (ngSubmit)="login()">
-        <input type="text" name="username"  placeholder="Email">
+    <form (submit)="login(email.value, password.value)">
+        <input type="text" name="username"  placeholder="Email" #email>
         <br><br>
-        <input type="password" name="password"  placeholder="********">
-        <br><br><input type="submit" value="LOGIN" routerLink="/home"><br>
+        <input type="password" name="password"  placeholder="********" #password>
+        <br><br><input type="submit" value="LOGIN"><br>
         <br>
        <p class="password">FORGOT PASSWORD </p>
     </form>

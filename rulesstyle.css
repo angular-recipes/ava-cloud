@@ -1,170 +1,138 @@
-body 
-    {
-        font-family: Droid Sans;
-    }
-
-
+body {
+    font-family: Droid Sans;
+}
 
 table {
     width: 100%;
     border-collapse: collapse;
-  }
+}
 
-table th
-    {
+table th {
     background-color: #faf9f9;
-    text-align:left;
-    padding :20px 15px;
-    
-    }
-    
-table tr td 
-    {
-        padding:20px;
-        font-weight:bold;
-        font-size:20px;
-        
-    }
+    text-align: left;
+    padding: 20px 15px;
+}
 
+table tr td {
+    padding: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
 
-tr:nth-child(2),tr:nth-child(3) 
-    {
-        border-bottom: 1px solid #ddd;
-    }
+tr:nth-child(2),
+tr:nth-child(3) {
+    border-bottom: 1px solid #ddd;
+}
 
-.dot
-     {
-        height: 31px;
-        width: 31px;
-        border-radius: 50%;
-        display:inline-block;
-        background-color: #9ef2ae;
-        text-align:center;
-        color:white;
-      }
+.dot {
+    height: 31px;
+    width: 31px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #9ef2ae;
+    text-align: center;
+    color: white;
+}
 
+.square {
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+    right: 10px;
+}
 
-.square
-      {
-          height:30px;
-          width:30px;
-          border-radius: 5px;
-          background-color: black;
-          color:white;
-          display:inline-block;
-          text-align:center;
-          font-size:25px;
-          position:relative;
-          right:10px;
-      }
-
-.button
-      {
-          height :10px;
-          width:20px;
-          margin-right:20px;
-          border: hidden;
-          
-      }
-
-
+.button {
+    height: 10px;
+    width: 20px;
+    margin-right: 20px;
+    border: hidden;
+}
 
 /* The Modal (background) */
 .modal {
-    
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
-    margin-left:50px;
-    
+    margin-left: 50px;
+
     left: 0;
     top: 0;
     width: 90%;
     height: fit-content;
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    height:80%;
-  }
-  
-  /* The Close Button */
-  .close {
+    height: 80%;
+}
+
+/* The Close Button */
+.close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-  }
-  
+}
 
+.form {
+    display: flex;
+    flex-direction: row;
+}
 
+.leftside {
+    width: 50%;
+    height: 900px;
+    font-size: 20px;
+}
 
+.rightside {
+    width: 50%;
+    height: 900px;
+    font-size: 20px;
+}
 
+input[type='submit'] {
+    width: 200px;
+    height: 47px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
 
+    border: none;
+    background-color: red;
+    cursor: pointer;
+}
 
-  .form
-    {
-        display:flex;
-        flex-direction: row;
-    }
-
-
-
-
-.leftside
-    {
-        width:50%;
-        height:900px;
-        font-size:20px;
-    }
-
-.rightside
-    {
-        width:50%;
-        height:900px;
-        font-size:20px;
-    }
-
-
-    input[type=submit] {
-        width: 200px;
-        height:47px;
-        font-size: 18px;
-        font-weight: bold;
-        color: white;
-        
-        border: none;
-        background-color: red;
-        cursor: pointer;
-      }
-
-      
-      input[type=text]
-    {
+input[type='text'] {
     width: 350px;
-    height:44px;
-    color:#21333e;
+    height: 44px;
+    color: #21333e;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    
+
     box-sizing: border-box;
-    
-    }
+}

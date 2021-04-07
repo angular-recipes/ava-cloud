@@ -18,14 +18,14 @@
 
     </div>
 
-    <div class="intruder">
+    <div class="intruder" *ngFor="let alert of alerts">
         <div class="cam">
-            <img src="/images/intruder.jpg">
+            <img [src]="alert.picture || '/images/intruder.jpg'">
         </div>
         <div class="info">
-            <span style="color:red;font-size:20px;font-weight: bold;"> Intruder Alert</span>
-            <br><br><span style="font-size:30px;">CAM 001-Backyard Gate</span>
-            <br><br><span style="font-size:15px;font-weight: bold;">26th November 2020 7:45:31 P.M IST </span>
+            <span style="color:red;font-size:20px;font-weight: bold;">{{alert.alert_module}}</span>
+            <br><br><span style="font-size:30px;">{{alert.sensor_id}}</span>
+            <br><br><span style="font-size:15px;font-weight: bold;">{{alert.created_at}}</span>
         </div>
 
     </div>
