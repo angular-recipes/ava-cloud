@@ -1,43 +1,86 @@
 <table>
-    <tbody><tr>
-        <th><button class="button" id="myBtn"><span class="square">+</span></button>Rule No</th>
-        <th>Module</th>
-        <th>Start Time</th>
-        <th>End Time</th>
-        <th>Count Limit</th>
-        <th>CAM IDS</th>
-        <th>Enabled</th>
-    </tr>
+    <tbody>
+        <tr>
+            <th><button class="button" id="myBtn"><span class="square" (click)="showModal=true">+</span></button>Rule No</th>
+            <th>Module</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Count Limit</th>
+            <th>CAM IDS</th>
+            <th>Enabled</th>
+        </tr>
 
-    <tr>
-        <td>1</td>
-        <td>Person</td>
-        <td>9 PM</td>
-        <td>6 AM</td>
-        <td>0</td>
-        <td>CAM 001</td>
-        <td><span class="dot">✓</span></td>
-    </tr>
+        <tr>
+            <td>1</td>
+            <td>Person</td>
+            <td>9 PM</td>
+            <td>6 AM</td>
+            <td>0</td>
+            <td>CAM 001</td>
+            <td><span class="dot">✓</span></td>
+        </tr>
 
-    
-    <tr>
-        <td>2</td>
-        <td>Person</td>
-        <td>N/A</td>
-        <td>N/A</td>
-        <td>5</td>
-        <td>CAM 004</td>
-        <td><span class="dot">✓</span></td>
-    </tr>
 
-    
-    <tr>
-        <td>3</td>
-        <td>Fire</td>
-        <td>N/A</td>
-        <td>N/A</td>
-        <td>5</td>
-        <td>CAM 002</td>
-        <td>close</td>
-    </tr>
-</tbody></table>
+        <tr>
+            <td>2</td>
+            <td>Person</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>5</td>
+            <td>CAM 004</td>
+            <td><span class="dot">✓</span></td>
+        </tr>
+
+
+        <tr>
+            <td>3</td>
+            <td>Fire</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>5</td>
+            <td>CAM 002</td>
+            <td>close</td>
+        </tr>
+    </tbody>
+</table>
+
+<div id="myModal" class="modal" [hidden]="!showModal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" (click)="showModal=false">×</span>
+        <span style="color:red;font-size:20px;font-weight:bold;"> Add a new Rule</span>
+        <form>
+
+            <div class="form">
+
+                <div class="leftside">
+                    <br><br><label for="model"> <b>Select Model</b></label><br>
+                    <select name="model" id="model">
+                        <option value="fire">Fire</option>
+                        <option value="box">Box</option>
+                        <option value="car">Car</option>
+                        <option value="person">Person</option>
+                    </select>
+                    <br><br>
+                    <br><br>
+                    <br><br>
+                    <label for="cam"><b>CAM ID</b></label><br>
+                    <input type="text" id="cam"><br>
+
+                    <label for="count"><b>Count Limit</b></label><br>
+                    <input type="text" id="count"><br>
+                </div>
+                <div class="rightside">
+                    <label for="start"><b>Start Time</b></label><br>
+                    <input type="text" id="start"><br>
+
+                    <label for="end"><b>End Time</b></label><br>
+                    <input type="text" id="end"><br>
+
+                    <br><br><br><b>Enable</b> <input type="checkbox" name="" checked="checked"><br><br>
+                    <br><br><br> <input type="submit" value="Save Rule">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

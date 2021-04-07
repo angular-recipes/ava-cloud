@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-subscriptions.component.css']
 })
 export class MySubscriptionsComponent implements OnInit {
-
+  showModal = false;
   constructor() { }
 
   ngOnInit(): void {
