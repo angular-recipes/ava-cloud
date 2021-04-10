@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./password.component.css'],
 })
 export class PasswordComponent implements OnInit {
-    constructor (private http: HttpClient) {}
+    constructor (private http: HttpClient, private router: Router) {}
 
     ngOnInit (): void {}
 
@@ -24,6 +25,7 @@ export class PasswordComponent implements OnInit {
         console.log(data);
         if (data.success) {
             alert('Password changed successfully!');
+            this.router.navigate(['/login']);
         } else {
             alert(data.message);
         }

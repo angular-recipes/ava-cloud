@@ -1,43 +1,20 @@
 <div id="mysub" class="tabcontent" style="display: block;">
-    <div class="flexbox">
+    <div class="flexbox" *ngFor="let model of myModels">
         <div class="box1">
-            <img src="/images/person.jpg">
+            <img [src]="model.images[0].name.url" />
         </div>
         <div class="box2">
-            <h3 style="color:red;font-weight:normal">Person Detection</h3>
-            <p>Pedestrician Detection is an essential and significiant task in any intelligence video surveillance
-                system,as it provides the fundamental information for semantic undertanding of the video footages. It
-                has an obvious extension to automative applications due to the potential for improving safety systems.
-            </p>
+            <h3 style="color:red;font-weight:normal">{{model.rowdatas.Name}}</h3>
+            <p class="desc">{{model.rowdatas.Description}}</p>
             <div>
-                <b> Subscription Date: </b>15-09-2020 &nbsp; &nbsp; &nbsp; &nbsp; <b>Usage: 34656</b> frames,<b> 17
+                <b> Subscription Date: </b>{{model.created_at}} &nbsp; &nbsp; &nbsp; &nbsp; <b>Usage: 34656</b> frames,<b> 17
                 </b>alerts
             </div>
 
         </div>
         <div class="box3">
             <!-- Trigger/Open The Modal -->
-            <img src="/images/remove.jpg" id="myBtn" (click)="showModal=true">
-        </div>
-    </div>
-
-
-    <div class="flexbox">
-        <div class="box1">
-            <img src="/images/bag.jpg">
-        </div>
-        <div class="box2">
-            <h3 style="color:red;font-weight:normal">Unattented Bag Detection</h3>
-            <p>Pedestrician Detection is an essential and significiant task in any intelligence video surveillance
-                system,as it providesthe fundamental information for semantic undertanding of the video footages. It has
-                an obvious extension to automative applications due to the potential for improving safety systems. </p>
-            <div>
-                <b> Subscription Date: </b>15-09-2020 &nbsp; &nbsp; &nbsp; &nbsp; <b>Usage: 34656</b> frames,<b> 17
-                </b>alerts
-            </div>
-        </div>
-        <div class="box3">
-            <img src="/images/remove.jpg">
+            <img src="/images/remove.jpg" id="myBtn" (click)="showModal=true; modelId=model.id">
         </div>
     </div>
 
@@ -54,8 +31,8 @@
             Confirm removal of subscription for Person Detection
         </div>
         <div>
-            <button id="quity" class="yes size"> Yes</button>
-            <button id="quitn" class="no size"> No </button>
+            <button id="quity" class="yes size" (click)="unsubscribeModel(); showModal=false;"> Yes</button>
+            <button id="quitn" class="no size" (click)="showModal=false"> No </button>
         </div>
     </div>
 </div>
