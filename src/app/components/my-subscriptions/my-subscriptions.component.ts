@@ -17,7 +17,7 @@ export class MySubscriptionsComponent implements OnInit {
     }
 
     async loadData() {
-        const data = await this.http
+        const data: any = await this.http
             .get(
                 `http://nevacore.atneva.ai/api/marketplaces?token=${localStorage.getItem(
                     'token'
@@ -28,7 +28,7 @@ export class MySubscriptionsComponent implements OnInit {
     }
 
     async unsubscribeModel () {
-        const data = await this.http
+        const data: any = await this.http
             .post('http://nevacore.atneva.ai/api/marketplaces/unsubscribe', {
                 token: localStorage.getItem('token'),
                 id: this.modelId,

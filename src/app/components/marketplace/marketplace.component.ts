@@ -15,7 +15,7 @@ export class MarketplaceComponent implements OnInit {
     }
 
     async loadData() {
-        const data = await this.http
+        const data: any = await this.http
             .get(
                 `http://nevacore.atneva.ai/api/marketplaces?token=${localStorage.getItem(
                     'token'
@@ -23,11 +23,10 @@ export class MarketplaceComponent implements OnInit {
             )
             .toPromise();
         this.marketModels = data.response;
-        console.log(this.marketModels);
     }
 
     async subscribeModel (id) {
-        const data = await this.http.post(
+        const data: any = await this.http.post(
             'http://nevacore.atneva.ai/api/marketplaces/subscribe',
             {
                 token: localStorage.getItem('token'),
