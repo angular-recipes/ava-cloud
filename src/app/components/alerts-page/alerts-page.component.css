@@ -7,15 +7,16 @@
 .intruder {
   display: flex;
   flex-direction: row;
-
-  margin: 20px;
+  margin: 20px 0;
+  justify-content: space-between;
 }
 
 .status {
   background-color: #f4f4f4;
-  width: fit-content;
+  /* width: fit-content; */
   height: 70px;
-  padding-right: 200px;
+  padding: 0 20px;
+  /* padding-right: 200px; */
 }
 
 .dot1 {
@@ -24,9 +25,8 @@
   border-radius: 50%;
   display: inline-block;
   background-color: #80c117;
-  position: relative;
-  right: 10px;
   text-align: center;
+  margin-left: 15px;
 }
 
 .dot2 {
@@ -36,34 +36,37 @@
   display: inline-block;
   background-color: #80c117;
   position: relative;
-  left: 10px;
   text-align: center;
+  margin-left: 15px;
 }
 
 .box1 {
-  width: 200px;
+  /* width: 200px; */
   height: 40px;
   padding: 7px 10px;
-
   margin-left: 20px;
+}
+
+.box1 p {
+  display: inline-block;
 }
 
 .box2 {
   margin: 20px;
-  width: 100px;
+  /* width: 100px; */
   height: 40px;
   padding-top: 6px;
 }
 
 .box3 {
   margin: 20px 20px 20px 100px;
-  width: 300px;
+  /* width: 300px; */
   height: 40px;
 }
 
 .box4 {
   margin-top: 25px;
-  width: 250px;
+  /* width: 250px; */
   height: 40px;
 }
 
